@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Learning Platform</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="logo.png" alt="Website Logo" />
+            </a>
+        </div>
+        <div class="nav-right">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="reading.html">Reading</a></li>
+                <li><a href="#">Writing</a></li>
+                <li><a href="#">Listening</a></li>
+                <li><a href="#">Speaking</a></li>
+            </ul>
+            <div class="avatar-dropdown">
+                <img src="logo.png" alt="User Avatar" class="avatar-img" />
+                <div class="dropdown-menu">
+                    <a href="settings.html">Settings (UPCOMING)</a>
+                    <a href="login.html">Sign Out (UPCOMING)</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <h1>Welcome to Your Learning Journey</h1>
+        <p>Build your skills step by step with interactive courses</p>
+        <button id="startBtn">Start Learning</button>
+    </section>
+
+    <section id="courses">
+        <h2>Choose Your Course</h2>
+        <div class="course-grid">
+            <div class="course-card">
+                <h3>Reading</h3>
+                <p>Improve comprehension and vocabulary.</p>
+                <a href="reading.html" id="reading-link">Go to Reading</a>
+            </div>
+            <div class="course-card">
+                <h3>Writing</h3>
+                <p>Enhance your writing and grammar.</p>
+                <a href="#" id="writing-link">Go to Writing</a>
+                <strong>UPCOMING</strong>
+            </div>
+            <div class="course-card">
+                <h3>Listening</h3>
+                <p>Practice listening with real examples.</p>
+                <a href="#" id="listening-link">Go to Listening</a>
+                <strong>UPCOMING</strong>
+            </div>
+            <div class="course-card">
+                <h3>Speaking</h3>
+                <p>Boost your confidence in conversations.</p>
+                <a href="#" id="speaking-link">Go to Speaking</a>
+                <strong>UPCOMING</strong>
+            </div>
+        </div>
+    </section>
+    <script>
+        // Load avatar from localStorage
+        const avatar = localStorage.getItem("profileAvatar") || "images/non.png";
+        document.getElementById("nav-avatar").src = avatar;
+    </script>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
