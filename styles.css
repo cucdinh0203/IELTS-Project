@@ -4,7 +4,40 @@
   box-sizing: border-box;
 }
 
-/* Add these styles to your index.css file */
+body, p, strong, table {
+    color: #000 !important;  /* Đảm bảo chữ màu đen */
+    visibility: visible !important; /* Luôn hiển thị */
+    opacity: 1 !important; /* Không trong suốt */
+}
+
+
+#translateBox {
+    background: #ffffff;
+    color: #000;
+    border: 1px solid #222;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    padding: 10px;
+    font-size: 14px;
+    max-width: 200px;
+    position: absolute;
+    z-index: 9999;
+}
+
+strong {
+    color: blue;
+    cursor: pointer;
+}
+
+.translate-box {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    width: 250px;
+    padding: 10px;
+    background: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
 
 
 
@@ -12,6 +45,7 @@
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  color:#000
 }
 
 .animate {
